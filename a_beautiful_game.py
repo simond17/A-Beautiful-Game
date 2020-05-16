@@ -47,8 +47,16 @@ class Game:
         self.brightButton = (255,0,0)
         self.darkButton = (200,0,0)
 
+        # Set the button size
+        self.buttonWidth = 0.3 * self.width
+        self.buttonHeight = 0.15 * self.height
+
+        # Home screen text alignement
+        self.alignLeft = (0.1*self.width)
+        self.alignCenter = (0.5*self.width)
+
         # Display home screen where we select the game to play
-        self.firstStart()
+        self.displayHomeScreen()
 
         # Ready to run the Game
         self.running = True
@@ -57,6 +65,50 @@ class Game:
         # pygame.QUIT is the event for pressing the big red X in the corner of the page
         if event.type == pygame.QUIT:
             self.running = False
+
+        # Brighten up the game buttons on the home screen when hovered
+        if event.type == pygame.MOUSEMOTION and self.homeScreen:
+            posi_mouse = event.pos
+            self.BrightenUpButtons(posi_mouse)
+
+
+
+
+    def BrightenUpButtons(self, posi_mouse):
+        """
+        Based on the position of the mouse, brightens up the buttons on the home screen
+        Adds an interactive effect
+        """
+        mouse_x = posi_mouse[0]
+        mouse_y = posi_mouse[1]
+
+        # Is the self.game_1_button being hovered?
+        if (self.game_1_button.x < mouse_x < self.game_1_button.x + self.buttonWidth) and (
+                self.game_1_button.y < mouse_y < self.game_1_button.y + self.buttonHeight):
+            self.game_1_button = pygame.draw.rect(self.screen, self.brightButton,
+                                                  (self.alignLeft, 200, self.buttonWidth, self.buttonHeight))
+            self.screen.blit(self.nameGame1, (self.alignLeft, (200 + 0.25 * self.buttonHeight)))
+            pygame.display.update()
+        else:
+            self.game_1_button = pygame.draw.rect(self.screen, self.darkButton,
+                                                  (self.alignLeft, 200, self.buttonWidth, self.buttonHeight))
+            self.screen.blit(self.nameGame1, (self.alignLeft, (200 + 0.25 * self.buttonHeight)))
+            pygame.display.update()
+
+        # Is the self.game_2_button being hovered?
+        if (self.game_2_button.x < mouse_x < self.game_2_button.x + self.buttonWidth) and (
+                self.game_2_button.y < mouse_y < self.game_2_button.y + self.buttonHeight):
+            self.game_2_button = pygame.draw.rect(self.screen, self.brightButton,
+                                                  (self.alignCenter, 200, self.buttonWidth, self.buttonHeight))
+            self.screen.blit(self.nameGame2, (self.alignCenter, (200 + 0.25 * self.buttonHeight)))
+            pygame.display.update()
+
+        else:
+            self.game_2_button = pygame.draw.rect(self.screen, self.darkButton,(self.alignCenter, 200, self.buttonWidth, self.buttonHeight))
+            self.screen.blit(self.nameGame2, (self.alignCenter, (200 + 0.25 * self.buttonHeight)))
+            pygame.display.update()
+
+
 
 
 
@@ -84,7 +136,7 @@ class Game:
             self.on_render()
         self.on_cleanup()
 
-    def firstStart(self):
+    def displayHomeScreen(self):
         """
         Presents the Welcome screen.
         Lets the user choose what game he wants to play
@@ -98,22 +150,18 @@ class Game:
         # Text to display
         title = self.bigFont.render("Welcome to A Beautiful Game", True, (255,255,255))
         selection = self.smallFont.render("Please select a Game", True, (255,255,255))
-        align_left = (0.1*self.width)
-        align_center = (0.5*self.width)
-        self.screen.blit(title, (align_left,0))
-        self.screen.blit(selection, (align_left,100))
+        self.screen.blit(title, (self.alignLeft,0))
+        self.screen.blit(selection, (self.alignLeft,100))
 
         # Create buttons to select the games (eventually, refactor into a list)
-        button_width = 0.3*self.width
-        button_height = 0.15*self.height
-        self.game_1_button = pygame.draw.rect(self.screen, self.darkButton, (align_left, 200, button_width, button_height))
-        self.game_2_button = pygame.draw.rect(self.screen, self.darkButton, (align_center, 200, button_width, button_height))
+        self.game_1_button = pygame.draw.rect(self.screen, self.darkButton, (self.alignLeft, 200, self.buttonWidth, self.buttonHeight))
+        self.game_2_button = pygame.draw.rect(self.screen, self.darkButton, (self.alignCenter, 200, self.buttonWidth, self.buttonHeight))
 
         # Add the text
-        name_game_1 = self.smallFont.render("7 Cards Game", True, (255,255,255))
-        name_game_2 = self.smallFont.render("Other Game", True, (255,255,255))
-        self.screen.blit(name_game_1, (align_left,(200 + 0.25*button_height)))
-        self.screen.blit(name_game_2, (align_center,(200 + 0.25*button_height)))
+        self.nameGame1 = self.smallFont.render("7 Cards Game", True, (255,255,255))
+        self.nameGame2 = self.smallFont.render("Other Game", True, (255,255,255))
+        self.screen.blit(self.nameGame1, (self.alignLeft,(200 + 0.25*self.buttonHeight)))
+        self.screen.blit(self.nameGame2, (self.alignCenter,(200 + 0.25*self.buttonHeight)))
 
         # Update the whole display
         pygame.display.update()
