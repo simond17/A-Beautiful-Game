@@ -16,8 +16,8 @@ import os
 
 
 
-# Must pass the desired width and height of the game window when creating a new instance of Game
-class Game:
+# Must pass the desired width and height of the game window when creating a new instance of App
+class App:
     def __init__(self, width, height):
         '''
         @param width: width of the game window
@@ -136,7 +136,7 @@ class Game:
             # Declare that the 7 Cards Game is active
             self.sevenCardsGameScreen = True
             # Start the 7 cards game
-            self.sevenCardsGame()
+            self.playSevenCardsGame()
         ################################################################################################################
 
         ##### Is the self.game_2_button clicked?
@@ -146,10 +146,10 @@ class Game:
             # Declare that the Other Game is active
             self.otherGameScreen = True
             # Start the other game
-            self.otherGame()
+            self.playOtherGame()
         ################################################################################################################
 
-    def sevenCardsGame(self):
+    def playSevenCardsGame(self):
         """
         The 7 Cards Game
         At this point, the user clicked on the button to play the 7 cards game
@@ -157,12 +157,14 @@ class Game:
         self.screen.fill((0,0,0))
         pygame.display.update()
 
-    def otherGame(self):
+    def playOtherGame(self):
         """
         Another game
         Simply to illustrate that the App can go beyond simply the 7 cards game
         """
         self.screen.fill((255,255,255))
+        text = self.bigFont.render("This is another game", True, (0,0,0))
+        self.screen.blit(text, (self.alignLeft, 0.5*self.height))
         pygame.display.update()
 
 
@@ -233,8 +235,9 @@ class Game:
 
 # Executing the Game (creating an instance of the ''Game'' class)
 if __name__ == "__main__":
-    theGame = Game(1000,500)
-    theGame.on_execute()
+    theApp = App(1000,500)
+    theApp.on_execute()
+
 
 
 
