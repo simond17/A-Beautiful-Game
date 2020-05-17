@@ -154,8 +154,25 @@ class App:
         The 7 Cards Game
         At this point, the user clicked on the button to play the 7 cards game
         """
-        self.screen.fill((0,0,0))
+
+        # We start again on an empty canvas
+        self.screen.fill((0,128,0))
+
+
+        # Loading one card
+        two_clubs = pygame.image.load(os.path.join('png', '2_of_clubs.png'))
+        self.screen.blit(two_clubs, (10,10))
+
         pygame.display.update()
+
+        """
+        TODO: write a function that draws (dessiner) a card. Add a white rectangle in the back. Positions the card
+        """
+
+
+
+
+
 
     def playOtherGame(self):
         """
