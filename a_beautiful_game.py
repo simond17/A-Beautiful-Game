@@ -153,6 +153,7 @@ class App:
         """
         The 7 Cards Game
         At this point, the user clicked on the button to play the 7 cards game
+        CREATE A "cardGame" CLASS AND THE "sevenCardsGame" CLASS
         """
 
         # We start again on an empty canvas
@@ -165,9 +166,6 @@ class App:
 
         pygame.display.update()
 
-        """
-        TODO: write a function that draws (dessiner) a card. Add a white rectangle in the back. Positions the card
-        """
 
 
 
