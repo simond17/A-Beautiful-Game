@@ -94,26 +94,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="420" y="96" key="FileChooserDialogImpl/0.0.1280.680/1920.21.1680.1010@0.0.1280.680" timestamp="1589656130244" />
-    <state width="1659" height="103" key="GridCell.Tab.0.bottom" timestamp="1589667387116">
+    <state width="1659" height="307" key="GridCell.Tab.0.bottom" timestamp="1589727687027">
       <screen x="1920" y="21" width="1680" height="1010" />
     </state>
-    <state width="1259" height="103" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.21.1680.1010@0.0.1280.680" timestamp="1589666810274" />
-    <state width="1659" height="103" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.21.1680.1010@1920.21.1680.1010" timestamp="1589667387116" />
-    <state width="1659" height="103" key="GridCell.Tab.0.center" timestamp="1589667387116">
+    <state width="1259" height="103" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.21.1680.1010@0.0.1280.680" timestamp="1589724953089" />
+    <state width="1659" height="307" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.21.1680.1010@1920.21.1680.1010" timestamp="1589727687027" />
+    <state width="1259" height="103" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589675160820" />
+    <state width="1659" height="307" key="GridCell.Tab.0.center" timestamp="1589727687027">
       <screen x="1920" y="21" width="1680" height="1010" />
     </state>
-    <state width="1259" height="103" key="GridCell.Tab.0.center/0.0.1280.680/1920.21.1680.1010@0.0.1280.680" timestamp="1589666810274" />
-    <state width="1659" height="103" key="GridCell.Tab.0.center/0.0.1280.680/1920.21.1680.1010@1920.21.1680.1010" timestamp="1589667387116" />
-    <state width="1659" height="103" key="GridCell.Tab.0.left" timestamp="1589667387116">
+    <state width="1259" height="103" key="GridCell.Tab.0.center/0.0.1280.680/1920.21.1680.1010@0.0.1280.680" timestamp="1589724953089" />
+    <state width="1659" height="307" key="GridCell.Tab.0.center/0.0.1280.680/1920.21.1680.1010@1920.21.1680.1010" timestamp="1589727687027" />
+    <state width="1259" height="103" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589675160819" />
+    <state width="1659" height="307" key="GridCell.Tab.0.left" timestamp="1589727687027">
       <screen x="1920" y="21" width="1680" height="1010" />
     </state>
-    <state width="1259" height="103" key="GridCell.Tab.0.left/0.0.1280.680/1920.21.1680.1010@0.0.1280.680" timestamp="1589666810274" />
-    <state width="1659" height="103" key="GridCell.Tab.0.left/0.0.1280.680/1920.21.1680.1010@1920.21.1680.1010" timestamp="1589667387116" />
-    <state width="1659" height="103" key="GridCell.Tab.0.right" timestamp="1589667387116">
+    <state width="1259" height="103" key="GridCell.Tab.0.left/0.0.1280.680/1920.21.1680.1010@0.0.1280.680" timestamp="1589724953088" />
+    <state width="1659" height="307" key="GridCell.Tab.0.left/0.0.1280.680/1920.21.1680.1010@1920.21.1680.1010" timestamp="1589727687027" />
+    <state width="1259" height="103" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589675160819" />
+    <state width="1659" height="307" key="GridCell.Tab.0.right" timestamp="1589727687027">
       <screen x="1920" y="21" width="1680" height="1010" />
     </state>
-    <state width="1259" height="103" key="GridCell.Tab.0.right/0.0.1280.680/1920.21.1680.1010@0.0.1280.680" timestamp="1589666810274" />
-    <state width="1659" height="103" key="GridCell.Tab.0.right/0.0.1280.680/1920.21.1680.1010@1920.21.1680.1010" timestamp="1589667387116" />
+    <state width="1259" height="103" key="GridCell.Tab.0.right/0.0.1280.680/1920.21.1680.1010@0.0.1280.680" timestamp="1589724953089" />
+    <state width="1659" height="307" key="GridCell.Tab.0.right/0.0.1280.680/1920.21.1680.1010@1920.21.1680.1010" timestamp="1589727687027" />
+    <state width="1259" height="103" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589675160820" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1589656022854">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
