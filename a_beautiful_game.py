@@ -248,7 +248,7 @@ class App:
 
 
 
-# Executing the Game (creating an instance of the ''Game'' class)
+# Executing the App (creating an instance of the ''App'' class)
 if __name__ == "__main__":
     theApp = App(1000,500)
     theApp.on_execute()
